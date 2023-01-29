@@ -19,7 +19,7 @@ class ProductView(ModelViewSet, ListAPIView):
     serializer_class = ProductSerializer
     permission_classes = (IsAuthenticatedOrReadOnly,)
     filter_backends = [filters.SearchFilter]
-    search_fields = ['name', 'short_description', 'description']
+    search_fields = ['name', 'short_disc', 'full_disc']
 
 
 class UserView(ModelViewSet, ListAPIView):
